@@ -1,0 +1,1 @@
+[{"product":{"nombre":"test nombre producto","descripcion":"test descripcion","codigo":"test codigo","foto":"https://picsum.photos/200","precio":122.42,"stock":5,"id":"1628377807999","timestamp":1628377807999},"id":"1628396127158","timestamp":1628396127158}]
