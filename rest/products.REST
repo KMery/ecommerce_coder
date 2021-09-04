@@ -1,0 +1,46 @@
+//Se debe tener REST.Client (complemento VS Code) para poder utilizar lo siguiente
+@port=8080
+@api=http://localhost:{{port}}
+@id3=1628377698528
+@id2=6132e9ab1556b3e50f4e7705
+@id=6132e73db7d5f6cd172b5398
+###
+GET {{api}}/
+###
+GET {{api}}/productos
+###
+GET {{api}}/productos/{{id}}
+###
+GET {{api}}/productos/{{id3}}
+###
+POST {{api}}/productos
+Content-Type: application/json
+
+{ 
+    "title": "test nombre producto 2", 
+    "description": "test descripcion 2", 
+    "itemCode": "testCodigo123-2", 
+    "thumbnail": "https://picsum.photos/200", 
+    "price": 42.24, 
+    "stock": 2
+}
+###
+POST {{api}}/productos
+Content-Type: application/json
+
+{ 
+    "title": "test nombre producto 2", 
+    "description": "test descripcion 2", 
+    "itemCode": "testCodigo123-2"
+}
+###
+PATCH {{api}}/productos/{{id2}}
+Content-Type: application/json
+
+{ 
+    "title": "nombre producto actualizado", 
+    "description": "test descripcion actualizada", 
+    "stock": 2
+}
+###
+DELETE {{api}}/productos/{{id2}}

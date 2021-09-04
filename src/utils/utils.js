@@ -1,5 +1,5 @@
+//En desuso ya que se pasa a mongodb
 const fs = require("fs");
-// const Product = require('../models/product.model');
 
 const readArch = async (arch) => {
     try { 

@@ -1,0 +1,23 @@
+//Se debe tener REST.Client (complemento VS Code) para poder utilizar lo siguiente
+@port=8080
+@api=http://localhost:{{port}}
+@title=test nombre producto 2
+@itemCode=testCodigo123
+@min=15
+@max=50
+@min2=3
+@max2=60
+###
+GET {{api}}/
+###
+GET {{api}}/busqueda/nombre={{title}}
+###
+GET {{api}}/busqueda/codigo={{itemCode}}
+###
+GET {{api}}/busqueda/precio/{{min}}&{{max}}
+###
+GET {{api}}/busqueda/stock/{{min2}}&{{max2}}
+###
+GET {{api}}/busqueda/noValido/{{min}}&{{max}}
+###
+GET {{api}}/busqueda/noValido={{itemCode}}

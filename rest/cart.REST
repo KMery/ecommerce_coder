@@ -1,0 +1,35 @@
+//Se debe tener REST.Client (complemento VS Code) para poder utilizar lo siguiente
+@port=8080
+@api=http://localhost:{{port}}
+@id_cart2=1628396127158
+@id_cart=61338d538a7b6c49f2a1b0b7
+@id_prod=6132e73db7d5f6cd172b5398
+###
+GET {{api}}
+###
+GET {{api}}/carrito
+###
+GET {{api}}/carrito/{{id_cart}}
+###
+GET {{api}}/carrito/{{id_cart2}}
+
+###
+POST {{api}}/carrito
+Content-Type: application/json
+
+{
+    "product": "6132e73db7d5f6cd172b5398"
+}
+###
+PUT {{api}}/carrito/modifica/{{id_cart}}
+Content-Type: application/json
+
+{
+    "product": "6133da5a63ad7956cf2b9c94"
+}
+###
+DELETE {{api}}/carrito/modifica/{{id_cart}}&{{id_prod}}
+###
+DELETE {{api}}/carrito/{{id_cart}}
+###
+DELETE {{api}}/carrito/{{id_cart2}}

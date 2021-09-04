@@ -1,20 +1,14 @@
 //id, timestamp, nombre, descripcion, código, foto (url), precio, stock.
 class Product {
-    constructor (nombre, descripcion, codigo, foto, precio, stock) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.codigo = codigo;
-        this.foto = foto;
-        this.precio = precio;
-        this.stock = stock;
-    }
-
-    setId(id) {
+    constructor (id, title, price, thumbnail, stock = 0, description = "", itemCode, quantity = 1) {
         this.id = id;
-    }
-
-    setTimeStamp() {
-        this.timestamp = Date.now();
+        this.title = title;
+        this.price = price;
+        this.thumbnail = thumbnail;
+        this.description = description;
+        this.itemCode = itemCode;
+        this.stock = stock;
+        this.quantity = quantity;
     }
 }
 
